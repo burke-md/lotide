@@ -40,9 +40,6 @@ const map = function(array, callback){
   return results;
 }
 
-// Think about the different scenarios that make sense to test.
-// Be sure to use assertArraysEqual to compare the results from map with expected array results.
-
 //return array with first letter in each word
 const results1 = map(numbers, null);
 console.log(results1);
