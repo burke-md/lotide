@@ -38,3 +38,6 @@ const eqArrays = function(arr1, arr2) {
 
 assertArraysEqual(letterPositions("halloween").e, [1])
 assertArraysEqual(letterPositions("hello").l, [2, 3])
+
+
+module.exports = letterPositions;

@@ -57,3 +57,5 @@ assertArraysEqual(results1, numbers);
 assertArraysEqual(results2,[])
 assertArraysEqual(results3,[5, 10, 15, 20, 25, 30, 35, 40, 45, 50]) // pass
 assertArraysEqual(map(numbers, number => number), numbers)
+
+module.exports = map;

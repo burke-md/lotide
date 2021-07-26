@@ -33,3 +33,5 @@ const results2 = findKey(null, x => x.stars === 2)
 
 assertEqual(results1, "noma");// normal operation
 assertEqual(results2, "object null");
+
+module.exports = findKey;

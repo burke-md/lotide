@@ -12,32 +12,22 @@ const eqObjects = function(object1, object2) {
   }
   // refactor as for of loop
   for (let i = 0; i < Object.keys(object1).length; i++) {
-    // console.log("obj1",object1[Object.keys(object1)[i]]);
-    // console.log("obj2", object2[Object.keys(object1)[i]]);
 
-    //check for array
     if (Array.isArray(object1[Object.keys(object1)[i]])) {
-      // console.log("this is an array");
-      //check it eqArray false
-      if (eqArrays(object1[Object.keys(object1)[i]], object2[Object.keys(object1)[i]])) {
-        // console.log("array check passed");
 
-        //return false
+      if (eqArrays(object1[Object.keys(object1)[i]], object2[Object.keys(object1)[i]])) {
 
       } else {
-        // console.log("array check failed");
+
         return false;
       }
 
     } else {
-      // console.log("not an array");
-        
       if (object1[Object.keys(object1)[i]] !== object2[Object.keys(object1)[i]]) {
         return false;
       }
     }
-  }
-    
+  }  
   return true;
 };
 
@@ -45,13 +35,9 @@ const eqObjects = function(object1, object2) {
 const eqArrays = function(arr1, arr2) {
   //check arr legnth
   if (arr1.length === arr2.length) {
-    // console.log("arr1 length", arr1.length);
-    // console.log("arr2 length", arr2.length);
-    // check value each element
+
     for (let i = 0; i < arr1.length; i ++) {
       if (arr1[i] !==  arr2[i]) {
-        // console.log("arr1 element",arr1[i]);
-        // console.log("arr2 element",arr2[i]);
         return false;
       }
     }
@@ -60,8 +46,6 @@ const eqArrays = function(arr1, arr2) {
   }
   return true;
 };
-
-
 
 
 const ab = { a: "1", b: "2" };
@@ -81,7 +65,7 @@ assertEqual(eqObjects(cd, dc), true); // => true
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
 
-
+module.exports = eqObjects;
 
 
 
