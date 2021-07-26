@@ -1,12 +1,12 @@
 const letterPositions = function(sentence) {
   const results = {};
-  
+  // hello
   for ( let i = 0; i < sentence.length; i++) {
-    if (results[sentence[i]]){
+    if (results[sentence[i]]){ //if letter is alread in obj
 
-      results[sentence[i]].push(i)
+      results[sentence[i]].push(i)// edit obj
     } else {
-      results[sentence[i]] = [i]
+      results[sentence[i]] = [i]// if letter is not in obj yet
     }
   }
   console.log(results)
@@ -36,5 +36,5 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-assertArraysEqual(letterPositions("hello").e, [1])
+assertArraysEqual(letterPositions("halloween").e, [1])
 assertArraysEqual(letterPositions("hello").l, [2, 3])

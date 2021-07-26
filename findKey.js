@@ -8,6 +8,7 @@ const assertEqual = function(actual, expected) {
 
 
 const findKey = function(obj,callback) {
+  //edge case
   if (!obj) return "object null"
   
   //iterate through obj items
@@ -28,7 +29,7 @@ const results1  = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2); // => "noma"
 
-const results2 = findKey(null,x => x.stars === 2)
+const results2 = findKey(null, x => x.stars === 2)
 
 assertEqual(results1, "noma");// normal operation
 assertEqual(results2, "object null");
